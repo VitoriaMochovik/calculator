@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
 export const SubContainer = styled.div`
-  width: 1089px;
+  max-width: 1089px;
+  width: 100%;
 `

@@ -2,11 +2,16 @@ import styled from "styled-components"
 import { Select, NumberInput } from '@mantine/core';
 
 export const Box = styled.div`
-    width: 426px;
+    max-width: 426px;
+    width: 100%;
     height: 467px;
     background: white;
     margin-left: 75.5px;
     border-radius: 5px;
+
+    @media (max-width: 1050px) {
+        margin-left: 0;
+    }
 `
 
 export const PDescription = styled.p`
@@ -17,10 +22,14 @@ export const PDescription = styled.p`
     line-height: 26.18px;
     margin-bottom: 22px;
 
+    @media (max-width: 1050px) {
+        margin-left: 40px;
+    }
 `
 
 export const MyInputR = styled(NumberInput)<any> `
-    width: 156px;
+    max-width: 156px;
+    width: 100%;
     margin-top: 1px;
     
     & > div > input {
@@ -42,7 +51,8 @@ export const MyInputR = styled(NumberInput)<any> `
 
 
 export const MyInput = styled(NumberInput)<any> `
-    width: 156px;
+    max-width: 156px;
+    width: 100%;
     margin-top: 1px;
     
     & > div>  input {
@@ -61,7 +71,8 @@ export const MyInput = styled(NumberInput)<any> `
     }
 `
 export const MySelect = styled(Select)<any>`
-    width: 156px;
+    max-width: 156px;
+    width: 100%;
     margin-top: 1px;
 
     & > div > input {
@@ -72,5 +83,27 @@ export const MySelect = styled(Select)<any>`
     & > div > p {
         font-size: 13px;
     
+    }
+`
+
+export const Content = styled.div`
+    padding-top: 24px;
+    margin-left: 44px;
+
+    @media (max-width: 1050px) {
+        padding-top: 0;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+`
+
+export const Form = styled.form`
+    @media (max-width: 1050px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
     }
 `

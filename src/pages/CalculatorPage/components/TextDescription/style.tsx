@@ -2,6 +2,12 @@ import styled from 'styled-components';
 
 export const Div = styled.div`
     padding-left: 70px;
+
+    @media (max-width: 1050px) {
+        padding-left: 0;
+
+        margin-top: 30px;
+    }
 `
 
 export const Title = styled.p`
@@ -16,11 +22,13 @@ export const Title = styled.p`
 `
 
 export const DivTitle = styled.div`
-    width: 452px;
+    max-width: 452px;
+    width: 100%;
 `
 
 export const DivDescription = styled.div`
-    width: 435px;
+    max-width: 435px;
+    width: 100%;
 `
 
 export const PDescription = styled.p`
@@ -33,7 +41,6 @@ export const PDescription = styled.p`
 `
 
 export const OlDescription = styled.ol`
-
     font-family: 'Inter', sans-serif;
     font-weight: 400; 
     color: #32323E;

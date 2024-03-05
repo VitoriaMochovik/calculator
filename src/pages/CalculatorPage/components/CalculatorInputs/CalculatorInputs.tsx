@@ -2,7 +2,7 @@ import { Button } from '@mantine/core';
 import { useForm, Controller } from 'react-hook-form';
 import { cashAllowance, inssDiscount, inssPercentage, irrfDiscount, irrfPercentage, oneThirdOfHolidays, oneThirdPecuniaryAllowance, thirteenFirstSalary, valueOfHolidays, workDayValue } from '../../../../utils/calculator';
 import { useNavigate } from "react-router-dom";
-import { Box, PDescription, MyInputR, MyInput, MySelect} from './style';
+import { Box, PDescription, MyInputR, MyInput, MySelect, Content, Form} from './style';
 import { Validation } from './rules';
 import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 
@@ -68,9 +68,9 @@ export const CaculatorInputs = () => {
     return (
         <div>
             <Box>
-                <div style={{paddingTop: '23.85px', marginLeft: '44px'}}>
+                <Content>
                     <PDescription> Calculadora de Férias Online</PDescription>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <Form onSubmit={handleSubmit(onSubmit)}>
                         <div style={{display: 'flex',  }}>
                             <div style={{marginRight: '18px'}}>
                                 <div>
@@ -174,8 +174,8 @@ export const CaculatorInputs = () => {
                         <Button   type='button' onClick={resetForm} style={{ width: '334px', height: '41.9px', background: 'transparent', color: '#5F5F5F', marginTop: '8px', paddingLeft: '15px'}}>
                             Limpar
                         </Button>
-                    </form>
-                </div>
+                    </Form>
+                </Content>
             </Box>
         </div>
     );
