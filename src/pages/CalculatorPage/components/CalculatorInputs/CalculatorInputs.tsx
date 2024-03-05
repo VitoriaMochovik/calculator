@@ -1,11 +1,6 @@
-
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { Input, CloseButton, Button, InputProps, Select,NumberInput } from '@mantine/core';
-import { IMaskInput } from 'react-imask';
+import { Button } from '@mantine/core';
 import { useForm, Controller } from 'react-hook-form';
 import { cashAllowance, inssDiscount, inssPercentage, irrfDiscount, irrfPercentage, oneThirdOfHolidays, oneThirdPecuniaryAllowance, thirteenFirstSalary, valueOfHolidays, workDayValue } from '../../../../utils/calculator';
-import { Navigate } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { Box, PDescription, MyInputR, MyInput, MySelect} from './style';
 import { Validation } from './rules';
@@ -14,7 +9,7 @@ import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 const resolver = classValidatorResolver(Validation)
 
 export const CaculatorInputs = () => {
-    const { control, handleSubmit, reset, setValue, watch } = useForm<Validation>({
+    const { control, handleSubmit, reset } = useForm<Validation>({
         defaultValues: {
             hasMonetaryAllowance: 'Não',
             advanceInstallment13: 'Não',

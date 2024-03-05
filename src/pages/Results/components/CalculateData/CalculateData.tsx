@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
 import { RowTable } from '../RowTable/RowTable';
 import { useLocation } from 'react-router-dom';
 import { formatToBRL } from '../../../../utils/formatToBRL';
@@ -13,10 +11,6 @@ export const CalculateData = () => {
         userResponse: {
             hasMonetaryAllowance,
             advanceInstallment13,
-            dependents,
-            holidayDays,
-            averageOvertime,
-            grossSalary,
         },
         calculatedValues: {
             valueHolydays,
