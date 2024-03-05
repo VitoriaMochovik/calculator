@@ -1,7 +1,7 @@
 
 import React from 'react';
 import AppRoutes from './routes';
-import {MantineProvider, Grid} from '@mantine/core';
+import {MantineProvider} from '@mantine/core';
 import '@mantine/core/styles.css';
 
 

@@ -17,36 +17,6 @@ export const oneThirdOfHolidays = (valueHolidays: number) => {
 
 // retorna o desconto a pagar do inss
 export const inssDiscount = (salaryHoliday: number) => {
-
-    // console.log("salario feria", salaryHoliday)
-    // const inssTable = [
-    //     { limiteInferior: 0, limiteSuperior: 1412.00, porcentagem: 0.075 },
-    //     { limiteInferior: 1412.01, limiteSuperior: 2666.68, porcentagem: 0.09 },
-    //     { limiteInferior: 2666.69, limiteSuperior: 4000.03, porcentagem: 0.12 },
-    //     { limiteInferior: 4000.04, limiteSuperior: 7786.02, porcentagem: 0.14 }
-    // ];
-    
-    // let position = 0;
-    // let sun = 0;
-    // for (const index of inssTable) {
-        
-    //     if (salaryHoliday <= index.limiteSuperior) {
-    //         sun = ((salaryHoliday - index.limiteInferior)*index.porcentagem)
-    //         position--;
-
-    //         while(position > 0){
-    //             console.log((inssTable[position].limiteSuperior))
-    //             sun = sun + ((inssTable[position].limiteSuperior - inssTable[position].limiteInferior)*inssTable[position].porcentagem)
-    //             position--;
-    //         }
-
-    //         return sun
-    //     }
-    //     position++;
-    // }
-    // return 0;
-
-    console.log("salario feria", salaryHoliday)
     const inssTable = [
         { limiteInferior: 0, limiteSuperior: 1412.00, porcentagem: 0.075, discount: 0 },
         { limiteInferior: 1412.01, limiteSuperior: 2666.68, porcentagem: 0.09, discount: 21.18 },
@@ -70,8 +40,6 @@ export const inssPercentage = (salaryHoliday: number, inssDiscount: number) => {
 
 }
 
-// _________________________________________________________________
-
 // retorna o desconto a pagar irrf
 export const irrfDiscount = (dependents: number, salaryHoliday: number, inssDiscount: number) => {
     const salaryInss = salaryHoliday - inssDiscount - (dependents * 189.59)
@@ -94,19 +62,15 @@ export const irrfDiscount = (dependents: number, salaryHoliday: number, inssDisc
 
     return ((salaryInss*0.2750) - 896)
 
-
-
 }
 
 // retorna porcentagem irrf
-
 export const irrfPercentage = (salaryHoliday: number, irrfDiscount: number) => {
     return ((irrfDiscount/salaryHoliday)*100)
 }
 
 
 // abono pecuniario
-
 export const cashAllowance = (salary: number, overtime: number) => {
     return (((salary + overtime)/30)*10)
 
@@ -114,14 +78,12 @@ export const cashAllowance = (salary: number, overtime: number) => {
 
 
 // 1/3 do abono 
-
 export const oneThirdPecuniaryAllowance = (pecuniaryAllowance: number) => {
     return (pecuniaryAllowance/3)
 
 }
 
 // decimo terceiro salario
-
 export const thirteenFirstSalary = (salary: number, overtime: number) => {
 
     return (salary + overtime)/2

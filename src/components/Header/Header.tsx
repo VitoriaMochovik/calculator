@@ -1,7 +1,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-const logo = require('../imgs/logo.png');
+import logo from '../../imgs/logo.png'
 
 const Div = styled.div`
     width: 100%;
@@ -15,7 +15,6 @@ export const Header = () => {
   return (
     <Div>
         <img src={logo} alt="Descrição da imagem" />
-      
     </Div>
   );
 }

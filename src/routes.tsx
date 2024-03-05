@@ -1,14 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {CalculatorPage} from './pages/CalculatorPage';
+import {CalculatorPage} from './pages/CalculatorPage/CalculatorPage';
 import { NotFoundPage } from './pages/NotFoundPage';
-import { Results } from './pages/results';
+import { Results } from './pages/Results/Results';
 
 const AppRoutes = () => {
   return (
     <Router>
       <Routes>
         <Route path="" element={<CalculatorPage />} />
-        {/* Outras rotas */}
         <Route path='/results' element={<Results />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
