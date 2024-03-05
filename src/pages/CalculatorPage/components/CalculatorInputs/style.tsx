@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Select, NumberInput } from '@mantine/core';
+import { Select, NumberInput, Button } from '@mantine/core';
 
 export const Box = styled.div`
     max-width: 426px;
@@ -11,6 +11,8 @@ export const Box = styled.div`
 
     @media (max-width: 1050px) {
         margin-left: 0;
+        padding-top: 22px;
+        height: 400px;
     }
 `
 
@@ -23,7 +25,10 @@ export const PDescription = styled.p`
     margin-bottom: 22px;
 
     @media (max-width: 1050px) {
-        margin-left: 40px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        line-height: 23px;
     }
 `
 
@@ -47,6 +52,10 @@ export const MyInputR = styled(NumberInput)<any> `
         font-size: 13px;
        
     }
+
+    @media (max-width: 1050px) {
+        max-width: 142px;
+    }
 `
 
 
@@ -69,6 +78,10 @@ export const MyInput = styled(NumberInput)<any> `
         font-size: 13px;
        
     }
+
+    @media (max-width: 1050px) {
+        max-width: 142px;
+    }
 `
 export const MySelect = styled(Select)<any>`
     max-width: 156px;
@@ -83,6 +96,10 @@ export const MySelect = styled(Select)<any>`
     & > div > p {
         font-size: 13px;
     
+    }
+
+    @media (max-width: 1050px) {
+        max-width: 142px;
     }
 `
 
@@ -104,6 +121,41 @@ export const Form = styled.form`
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 40px;
+        padding: 0 40px;
+    }
+`
+
+export const Label = styled.p`
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+    line-height: 21.56px;
+
+    @media (max-width: 1050px) {
+        font-size: 13px;
+        line-height: 19px;
+    }
+`
+
+export const ContainerInput = styled.div`
+    margin-top: 18px;
+
+    @media (max-width: 1050px) {
+        margin-top: 12px;
+    }
+`
+
+export const ButtonCalculate = styled(Button)<any>`
+    width: 334px;
+    margin-top: 30px;
+    height: 41.9px;
+    background: #3133FF;
+    borderRadius: 5px;
+
+    @media (max-width: 1050px) {
+        height: 38px;
+        margin-top: 25px;
+        width: 305px;
     }
 `

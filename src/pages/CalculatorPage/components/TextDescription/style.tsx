@@ -4,9 +4,8 @@ export const Div = styled.div`
     padding-left: 70px;
 
     @media (max-width: 1050px) {
-        padding-left: 0;
-
         margin-top: 30px;
+        padding: 20px;
     }
 `
 
@@ -19,6 +18,11 @@ export const Title = styled.p`
     margin-top: 0;
     line-height: 48.7px;
     margin-bottom: 22.6px;
+
+    @media (max-width: 1050px) {
+        font-size: 29px;
+        line-height: 35px;
+    }
 `
 
 export const DivTitle = styled.div`
@@ -38,6 +42,11 @@ export const PDescription = styled.p`
     font-size: 16px;
     line-height: 24.64px;
 
+    @media (max-width: 1050px) {
+        font-size: 14;
+        line-height: 21px;
+    }
+
 `
 
 export const OlDescription = styled.ol`
@@ -56,7 +65,14 @@ export const OlDescription = styled.ol`
         font-size: 16px;
         line-height: 24.64px;
        
+        @media (max-width: 1050px) {
+            font-size: 14;
+            line-height: 21px;
+        }
     }
    
-
+    @media (max-width: 1050px) {
+        font-size: 14;
+        line-height: 21px;
+    }
 `

@@ -9,5 +9,6 @@ export const Content = styled.div`
   @media (max-width: 1050px) {
     flex-direction: column-reverse;
     align-items: center;
+    padding-top: 3px;
   }
 `

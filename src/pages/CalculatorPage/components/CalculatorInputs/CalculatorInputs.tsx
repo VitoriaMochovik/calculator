@@ -2,7 +2,7 @@ import { Button } from '@mantine/core';
 import { useForm, Controller } from 'react-hook-form';
 import { cashAllowance, inssDiscount, inssPercentage, irrfDiscount, irrfPercentage, oneThirdOfHolidays, oneThirdPecuniaryAllowance, thirteenFirstSalary, valueOfHolidays, workDayValue } from '../../../../utils/calculator';
 import { useNavigate } from "react-router-dom";
-import { Box, PDescription, MyInputR, MyInput, MySelect, Content, Form} from './style';
+import { Box, PDescription, MyInputR, MyInput, MySelect, Content, Form, Label, ContainerInput, ButtonCalculate} from './style';
 import { Validation } from './rules';
 import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 
@@ -74,9 +74,9 @@ export const CaculatorInputs = () => {
                         <div style={{display: 'flex',  }}>
                             <div style={{marginRight: '18px'}}>
                                 <div>
-                                    <p style={{fontFamily: 'Inter, sans-serif', fontWeight: '400', fontSize: '14px', margin: '0', lineHeight: '21.56px'}} >
+                                    <Label>
                                         Salário bruto
-                                    </p> 
+                                    </Label> 
                                     <Controller
                                         control={control}
                                         name="grossSalary"
@@ -92,10 +92,10 @@ export const CaculatorInputs = () => {
                                         )}
                                     />
                                 </div>
-                                <div style={{marginTop: '18px'}}>
-                                    <p style={{fontFamily: 'Inter, sans-serif', fontWeight: '400', fontSize: '14px', margin: '0', lineHeight: '21.56px'}} >
+                                <ContainerInput>
+                                    <Label>
                                         Dependentes
-                                    </p> 
+                                    </Label> 
                                     <Controller
                                         control={control}
                                         name='dependents'
@@ -104,11 +104,11 @@ export const CaculatorInputs = () => {
                                         hideControls/>  
                                         }
                                     />   
-                                </div>
-                                <div style={{marginTop: '18px'}}>
-                                    <p style={{fontFamily: 'Inter, sans-serif', fontWeight: '400', fontSize: '14px', margin: '0', lineHeight: '21.56px'}} >
+                                </ContainerInput>
+                                <ContainerInput>
+                                    <Label>
                                         Abono pecuniário 1/3
-                                    </p> 
+                                    </Label> 
                                     <Controller
                                         control={control}
                                         name='hasMonetaryAllowance'
@@ -118,13 +118,13 @@ export const CaculatorInputs = () => {
                                         
                                         )}
                                     />   
-                                </div>
+                                </ContainerInput>
                             </div>
                             <div>
                                 <div>
-                                    <p style={{fontFamily: 'Inter, sans-serif', fontWeight: '400', fontSize: '14px', margin: '0', lineHeight: '21.56px'}} >
+                                    <Label>
                                         Média de hora extra
-                                    </p> 
+                                    </Label> 
                                     <Controller
                                         control={control}
                                         name='averageOvertime'
@@ -137,10 +137,10 @@ export const CaculatorInputs = () => {
                                     />   
                                 
                                 </div>
-                                <div style={{marginTop: '18px'}}>
-                                    <p style={{fontFamily: 'Inter, sans-serif', fontWeight: '400', fontSize: '14px', margin: '0', lineHeight: '21.56px'}} >
+                                <ContainerInput>
+                                    <Label>
                                         Dias de férias
-                                    </p> 
+                                    </Label> 
 
 
                                     <Controller
@@ -151,11 +151,11 @@ export const CaculatorInputs = () => {
                                             hideControls/>
                                         )}
                                     />   
-                                </div>
-                                <div style={{marginTop: '18px'}}>
-                                    <p style={{fontFamily: 'Inter, sans-serif', fontWeight: '400', fontSize: '14px', margin: '0', lineHeight: '21.56px'}} >
+                                </ContainerInput>
+                                <ContainerInput>
+                                    <Label>
                                         Adiantar 13 parcela?
-                                    </p> 
+                                    </Label> 
                                     <Controller
                                         control={control}
                                         name='advanceInstallment13'
@@ -165,12 +165,12 @@ export const CaculatorInputs = () => {
                                         
                                         )}
                                     />   
-                                </div>
+                                </ContainerInput>
                             </div>
                         </div>
-                        <Button type="submit" style={{width: '334px', marginTop: '30px', height: '41.9px', background: '#3133FF', borderRadius: '5px'}}>
+                        <ButtonCalculate type="submit">
                             Calcular
-                        </Button>
+                        </ButtonCalculate>
                         <Button   type='button' onClick={resetForm} style={{ width: '334px', height: '41.9px', background: 'transparent', color: '#5F5F5F', marginTop: '8px', paddingLeft: '15px'}}>
                             Limpar
                         </Button>
