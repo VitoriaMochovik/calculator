@@ -11,7 +11,7 @@ export const CalculatorPage = () => {
 
       
         <Header />
-        <div style={{background: '#EEF2F8', display: 'flex', paddingTop: '66px',  }}>
+        <div style={{background: '#EEF2F8', display: 'flex', paddingTop: '66px', height: '100vh' }}>
           
           <TextDescription />
           <CaculatorInputs />
